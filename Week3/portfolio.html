@@ -1,81 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mihir Gamre Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihir Gamre | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #dbeafe;
+            transform: scale(1.05);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            border-left: 6px solid #2563eb;
+            padding-left: 12px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .skills-list li {
+            background: #dbeafe;
+            color: #1e3a8a;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .project, .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .project h3, .experience-item h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .project span, .experience-item span {
+            color: #555;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
+<body>
 
-<body style="margin:0; font-family:Arial, sans-serif; background-color:#f4f6f8; color:#222;">
+    <header>
+        <h1>Mihir Gamre</h1>
+        <p>Computer Science Student | Software Engineering | Tutor</p>
+        <a class="btn" href="https://www.linkedin.com/in/mihir-gamre" target="_blank">View LinkedIn</a>
+    </header>
 
-    <section class="hero" style="background-color:#1e3a5f; color:white; text-align:center; padding:50px;">
-        <h1 id="name" style="font-size:45px;">Mihir Gamre</h1>
-        <p id="title" style="font-size:22px;">Computer Science Student | Software Engineering | Tutor</p>
+    <div class="container">
 
-        <a id="linkedin" href="https://www.linkedin.com/in/mihir-gamre" 
-           style="color:white; background-color:#0077b5; padding:12px 25px; text-decoration:none; border-radius:8px;">
-            View LinkedIn
-        </a>
-    </section>
+        <section class="card">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a Computer Science student at Arizona State University with a 4.00 GPA,
+                passionate about software engineering, problem solving, tutoring, and building
+                practical technology solutions. I enjoy learning new tools, collaborating with others,
+                and creating projects that are both functional and meaningful.
+            </p>
+        </section>
 
-    <section class="about" style="background-color:white; margin:30px; padding:30px; border-radius:15px;">
-        <h2 id="about-heading">About Me</h2>
-        <p id="about-text">
-            I am a Computer Science major at Arizona State University with a 4.00 GPA.
-            I am interested in software engineering, problem solving, tutoring, and building
-            useful technology projects.
-        </p>
-    </section>
+        <section class="card">
+            <h2 class="section-title">Education</h2>
+            <p><strong>Arizona State University, Tempe, AZ</strong></p>
+            <p>B.S. in Computer Science (Software Engineering)</p>
+            <p>May 2023 – Present</p>
+            <p><strong>GPA:</strong> 4.00 / 4.00</p>
+        </section>
 
-    <section class="skills" style="background-color:#e8f0fe; margin:30px; padding:30px; border-radius:15px;">
-        <h2 id="skills-heading">Technical Skills</h2>
-        <ul id="skills-list">
-            <li>C, C++, Java, Python</li>
-            <li>JavaFX, SQL, HTML, MATLAB</li>
-            <li>Microsoft Office, Google Drive, Oracle</li>
-        </ul>
-    </section>
+        <section class="card">
+            <h2 class="section-title">Technical Skills</h2>
+            <ul class="skills-list">
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaFX</li>
+                <li>JUnit</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>MATLAB</li>
+                <li>AutoCAD</li>
+                <li>Microsoft Office</li>
+                <li>Google Drive</li>
+                <li>Oracle</li>
+            </ul>
+        </section>
 
-    <section class="projects" style="background-color:white; margin:30px; padding:30px; border-radius:15px;">
-        <h2 id="projects-heading">Projects</h2>
+        <section class="card">
+            <h2 class="section-title">Projects</h2>
 
-        <h3 id="compiler-project">Recursive-Descent Compiler</h3>
-        <p id="compiler-text">
-            Built a compiler in C/C++ with syntax analysis, semantic checks, error detection,
-            polynomial evaluation, and automated testing.
-        </p>
+            <div class="project">
+                <h3>Recursive-Descent Compiler</h3>
+                <span>August 2025 – October 2025</span>
+                <p>
+                    Developed a recursive-descent compiler in C/C++ for a custom language with full syntax
+                    and semantic analysis. Added error detection, polynomial evaluation, degree computation,
+                    and warnings for uninitialized variables and useless assignments.
+                </p>
+            </div>
 
-        <h3 id="qa-project">Q&A Discussion Platform</h3>
-        <p id="qa-text">
-            Developed a JavaFX and SQL application similar to Ed Discussion with post moderation,
-            categories, UML diagrams, and backend database integration.
-        </p>
+            <div class="project">
+                <h3>Q&amp;A Discussion Platform</h3>
+                <span>January 2025 – May 2025</span>
+                <p>
+                    Built a JavaFX and SQL application modeled after Ed Discussion. Worked on moderation,
+                    categories, UML diagrams, backend database integration, and object-oriented design for
+                    a maintainable codebase.
+                </p>
+            </div>
 
-        <h3 id="pokemon-project">Pokemon Game</h3>
-        <p id="pokemon-text">
-            Created a text-based Pokemon game in C/C++ with map generation, player movement,
-            custom Pokemon, stats, abilities, and turn-based battles.
-        </p>
-    </section>
+            <div class="project">
+                <h3>Pokemon Game</h3>
+                <span>August 2024 – December 2024</span>
+                <p>
+                    Designed and developed a Pokemon game in C/C++ with map generation, player movement,
+                    turn-based battles, custom Pokemon characters, and modular backend logic.
+                </p>
+            </div>
+        </section>
 
-    <section class="experience" style="background-color:#fff3cd; margin:30px; padding:30px; border-radius:15px;">
-        <h2 id="experience-heading">Experience</h2>
+        <section class="card">
+            <h2 class="section-title">Work Experience</h2>
 
-        <h3 id="tutor-role">Engineering Tutor - ASU PULSE Tutoring</h3>
-        <p id="tutor-text">
-            Tutor students in Math and Computer Science through one-on-one and group sessions.
-        </p>
+            <div class="experience-item">
+                <h3>Engineering Tutor — PULSE Tutoring, Arizona State University</h3>
+                <span>October 2025 – Present</span>
+                <p>
+                    Support students in Math and Computer Science through one-on-one and group tutoring sessions,
+                    helping reinforce concepts and improve problem-solving skills. Collaborate with other tutors
+                    and apply training-based instructional methods.
+                </p>
+            </div>
 
-        <h3 id="intern-role">IT Intern - SRS Pharmaceuticals Pvt Ltd.</h3>
-        <p id="intern-text">
-            Assisted employees with laptop issues, completed CEH and Security+ modules,
-            and learned about productivity and cost-reduction methods.
-        </p>
-    </section>
+            <div class="experience-item">
+                <h3>IT Intern — SRS Pharmaceuticals Pvt Ltd., India</h3>
+                <span>June 2023 – August 2023</span>
+                <p>
+                    Completed CEH and CompTIA Security+ modules, assisted employees with laptop-related technical
+                    issues, and gained exposure to productivity and cost-reduction strategies through Shield 2024.
+                </p>
+            </div>
+        </section>
 
-    <section class="contact" style="background-color:#1e3a5f; color:white; text-align:center; padding:30px;">
-        <h2 id="contact-heading">Contact Me</h2>
-        <p id="phone">Phone: (623)-285-3246</p>
-        <p id="email">Email: mgamre@asu.edu</p>
-    </section>
+        <section class="card contact-info">
+            <h2 class="section-title">Contact</h2>
+            <p><strong>Phone:</strong> (623)-285-3246</p>
+            <p><strong>Email:</strong> mgamre@asu.edu</p>
+            <p><strong>LinkedIn:</strong> www.linkedin.com/in/mihir-gamre</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Mihir Gamre | Portfolio</p>
+    </footer>
 
 </body>
 </html>
